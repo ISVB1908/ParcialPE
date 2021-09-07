@@ -77,7 +77,8 @@ public class Structure<T extends Comparable<T> > implements IStructure<T> {
             last.setNext(position);
             position.setPrevious(last);
             last=position;
-            last.setNext(first);          
+            last.setNext(first); 
+            first.setPrevious(last);
         }
         
     }
@@ -93,6 +94,18 @@ public class Structure<T extends Comparable<T> > implements IStructure<T> {
             count++;
         }
         return "completao";
+    }
+
+    @Override
+    public Node<T> find(int position) {
+        int count=0;
+        current=first;
+        while(count<position){
+        
+            current=current.getNext();
+            count++;
+        }
+        return current;
     }
 
 

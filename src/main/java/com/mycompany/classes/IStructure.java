@@ -11,4 +11,5 @@ package com.mycompany.classes;
  */
 public interface IStructure <T extends Comparable<T>> {
     public void add(T element);
+    public Node<T> find(int position);
 }

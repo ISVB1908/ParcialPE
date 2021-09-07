@@ -6,6 +6,7 @@
 package com.mycompany.parcialparking;
 
 import com.mycompany.classes.Car;
+import com.mycompany.classes.Node;
 import com.mycompany.classes.Parking;
 import com.mycompany.classes.Person;
 import java.util.Scanner;
@@ -37,10 +38,37 @@ public class Main {
      
         Person costumer = new Person(idSave,checkAfiliate);
         Car mafe =new Car(plateSave,brandSave,costumer);
-        Car molano= new Car("dx","Xd",costumer);
+        Car molano= new Car("dxadfaeg","Xdagagadg",costumer);
+        Car mario= new Car("dx","Xd",costumer);
+        Car pau= new Car("lol","Xd",costumer);
+        Car cata= new Car("zzzz","Xd",costumer);
+        Car santiago= new Car("xxx","Xd",costumer);
+        Car jax= new Car("maint","Xd",costumer);
+        Car ate= new Car("tra","Xd",costumer);
+        Car teo= new Car("buco","Xd",costumer);
+        Car juan= new Car("prr","Xd",costumer);
+        
+        
         newParking.addCarro(mafe);
         newParking.addCarro(molano);
+        newParking.addCarro(mario);
+        newParking.addCarro(pau);
+        newParking.addCarro(cata);
+        newParking.addCarro(santiago);
+        newParking.addCarro(jax);
+        newParking.addCarro(ate);
+        newParking.addCarro(teo);
+        newParking.addCarro(juan);
+        
         System.out.println(newParking.getParkingList().toString());
+        //System.out.println(newParking.getParkingList().find(5).getPrevious().getValue());
+        Node current=newParking.getParkingList().getFirst();
+        for(int i=0;i<10;i++){
+        
+            System.out.println(current.getValue());
+            current=current.getPrevious();
+                    
+        }
         
         
     }
