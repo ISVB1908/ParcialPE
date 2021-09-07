@@ -16,7 +16,7 @@ public class Node <T extends Comparable<T>> {
     private T value;
 
     //constructor
-    public Node(Node<T> next, Node<T> previous, T value) {
+    public Node( T value) {
         this.next = next;
         this.previous = previous;
         this.value = value;

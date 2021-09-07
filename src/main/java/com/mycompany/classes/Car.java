@@ -51,5 +51,11 @@ public class Car implements Comparable<Car> {
     public int compareTo(Car o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    @Override
+    public String toString(){
+       
+        
+        return plate+"..."+brand+"..."+owner.toString();
+    }
     
 }

@@ -10,11 +10,12 @@ package com.mycompany.classes;
  * @author vasqu
  * @param <T>
  */
-public class Structure<T extends Comparable<T> > implements IStructure {
+public class Structure<T extends Comparable<T> > implements IStructure<T> {
     private Node<T> first;
     private Node<T> last;
     private Node<T> current;
     private Node<T> location;
+    
 
     //getters and setters
     public Node<T> getFirst() {
@@ -51,7 +52,48 @@ public class Structure<T extends Comparable<T> > implements IStructure {
     //function
 
     @Override
-    public void add(Comparable element) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void add(T element) {
+        //Node<T> newNode = new Node<T>(element);
+        //if(first == null){
+            //first = newNode;
+            //current = first;
+            //last = first;
+            
+        //}
+        //else{
+            //last.setNext(newNode);
+            //newNode.setPrevious(last);
+            //last = newNode;
+            
+        //}
+        
+        
+        Node<T> position = new Node<T>(element);
+        if(first==null){
+        first=position;
+        first.setPrevious(last);
+        last=first;
+        }else{
+            last.setNext(position);
+            position.setPrevious(last);
+            last=position;
+            last.setNext(first);          
+        }
+        
     }
+    @Override
+    public String toString(){
+    
+        current=first;
+        int count=0;
+        while(count<10){
+        
+            System.out.println(current.getValue());
+            current=current.getNext();
+            count++;
+        }
+        return "completao";
+    }
+
+
 }
