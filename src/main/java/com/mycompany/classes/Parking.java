@@ -54,7 +54,7 @@ public class Parking {
         int countR=0;
         while(countR<=5){
         
-            if(currentR.getValue()==null || currentR.getValue()=="Empty"){
+            if(currentR.getValue()==null || currentR.getValue()=="Empty , Empty , Empty , Empty"){
 
                 break;
             }
@@ -70,7 +70,7 @@ public class Parking {
         while(countL<=5){
             
             //si encuentra sale y confirma que no necesita buscar mas
-            if(currentL.getValue()==null || currentL.getValue()=="Empty"){
+            if(currentL.getValue()==null || currentL.getValue()=="Empty , Empty , Empty , Empty"){
                
             break;
             }
@@ -94,11 +94,12 @@ public class Parking {
 
     } 
     
-    public void deleteCarro(String placaC,int  hex,int mex){
+    public void deleteCarro(String placaC,int dex,int moex,int aex,int  hex,int mex){
     
         Node deleteC=parkingList.getFirst();
         do{
 
+            
             String compare=placaC;
             String placaV=deleteC.getValue().toString().split(",")[0];
             if(placaV.equals(compare)){
@@ -106,13 +107,16 @@ public class Parking {
                 //al supe como llamar la piche clase sin tener uqe hacer maromas con el toString
                 //bueno ya serio vamos a averiguar  la hora
                 Car carrito= (Car) deleteC.getValue();
+                int ae=carrito.getEnterAnio();
+                int moe=carrito.getEnterMonth();
+                int de=carrito.getEnterDay();
                 int he=carrito.getEnterHour();
                 int me=carrito.getEnterMin();
                 //int hex=carrito.getExitHour();
                 //int mex=carrito.getExitMin();
-                double facturaImpr=carrito.factura(he, me, hex, mex);
+                double facturaImpr=carrito.factura(ae,moe,de,he, me,aex,moex,dex, hex, mex);
                 System.out.println("su factura es de:"+facturaImpr);
-                deleteC.setValue("Empty");
+                deleteC.setValue("Empty , Empty , Empty , Empty");
                 location=deleteC;
                 
                 break;
@@ -124,5 +128,39 @@ public class Parking {
         }while(deleteC!=parkingList.getFirst());
         
     }
+    public void deleteCarroID(int iD,int dex,int moex,int aex,int hex,int mex){
     
+        Node deleteC=parkingList.getFirst();
+         int numEntero = iD;    
+        String numCadena= String.valueOf(iD);
+        do{
+
+            
+            String compare=numCadena;
+            String placaV=deleteC.getValue().toString().split(",")[2];
+            if(placaV.equals(compare)){
+            
+                //al supe como llamar la piche clase sin tener uqe hacer maromas con el toString
+                //bueno ya serio vamos a averiguar  la hora
+                Car carrito= (Car) deleteC.getValue();
+                int ae=carrito.getEnterAnio();
+                int moe=carrito.getEnterMonth();
+                int de=carrito.getEnterDay();
+                int he=carrito.getEnterHour();
+                int me=carrito.getEnterMin();
+                //int hex=carrito.getExitHour();
+                //int mex=carrito.getExitMin();
+                double facturaImpr=carrito.factura(ae,moe,de,he, me,aex,moex,dex, hex, mex);
+                System.out.println("su factura es de:"+facturaImpr);
+                deleteC.setValue("Empty , Empty , Empty , Empty");
+                location=deleteC;
+                
+                break;
+                }
+            
+            
+            deleteC=deleteC.getNext();
+            
+        }while(deleteC!=parkingList.getFirst());
+    }
 }

@@ -14,19 +14,27 @@ public class Car implements Comparable<Car> {
     private String brand;
     private String plate;
     private Person owner;
+    private int enterAnio;
+    private int enterMonth;
+    private int enterDay;
     private int enterHour;
     private int enterMin;
     private int exitHour;
     private int exitMin;
 
     //constructor
-    public Car(String brand, String plate,int enterHour,int enterMin, Person owner) {
+    public Car(String brand, String plate,int enterHour,int enterMin,int enterAnio,int enterMonth,int enterDay, Person owner) {
         this.brand = brand;
         this.plate = plate;
         this.owner = owner;
         this.enterHour=enterHour;
         this.enterMin=enterMin;
+        this.enterAnio=enterAnio;
+        this.enterMonth=enterMonth;
+        this.enterDay=enterDay;
     }
+
+    
 
     //getters and  setters
     
@@ -96,17 +104,59 @@ public class Car implements Comparable<Car> {
     public void setExitHour(int exitHour) {
         this.exitHour = exitHour;
     }
-    public double factura(int enterHour,int enterMin, int exitHour,int exitMin){
-        
+    public double factura(int enteranio,int entermes,int enterdia,int enterHour,int enterMin,int exitanio,int exitmes,int exitdia, int exitHour,int exitMin){
+        int anioPassed=exitanio-enteranio;
+        int mesPassed=exitmes-entermes;
+        int diasPassed=exitdia-enterdia;
         int hoursPassed=exitHour-enterHour;
         int minPassed=exitMin-enterMin;
+        
         if(minPassed>0){
         
             hoursPassed=hoursPassed+1;
         }
+        if(diasPassed>0){
+        
+            int pp=diasPassed;
+            hoursPassed=hoursPassed+(pp*24);
+        }
+        if(mesPassed>0){
+        
+            int pp=mesPassed;
+            hoursPassed=hoursPassed+(pp*24*31);
+        }
+        if(anioPassed>0){
+        
+            int pp=anioPassed;
+            hoursPassed=hoursPassed+(pp*24*31*365);
+        }
         double tarifa=3.500;
         double facturaP=tarifa*hoursPassed;
         return facturaP;
+    }
+
+    public int getEnterAnio() {
+        return enterAnio;
+    }
+
+    public void setEnterAnio(int enterAnio) {
+        this.enterAnio = enterAnio;
+    }
+
+    public int getEnterMonth() {
+        return enterMonth;
+    }
+
+    public void setEnterMonth(int enterMonth) {
+        this.enterMonth = enterMonth;
+    }
+
+    public int getEnterDay() {
+        return enterDay;
+    }
+
+    public void setEnterDay(int enterDay) {
+        this.enterDay = enterDay;
     }
 
  
