@@ -36,7 +36,15 @@ public class Person {
     }
     @Override
     public String toString(){
+        String cadenaA;
         String cadena = Integer.toString(id);
-        return cadena;
+        if(affiliate=true){
+        
+            cadenaA="Si";
+        }else{
+        
+            cadenaA="No";
+        }
+        return cadena+","+cadenaA;
     }
 }

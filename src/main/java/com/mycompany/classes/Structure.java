@@ -14,7 +14,7 @@ public class Structure<T extends Comparable<T> > implements IStructure<T> {
     private Node<T> first;
     private Node<T> last;
     private Node<T> current;
-    private Node<T> location;
+    
     
 
     //getters and setters
@@ -42,13 +42,6 @@ public class Structure<T extends Comparable<T> > implements IStructure<T> {
         this.current = current;
     }
 
-    public Node<T> getLocation() {
-        return location;
-    }
-
-    public void setLocation(Node<T> location) {
-        this.location = location;
-    }
     //function
 
     @Override

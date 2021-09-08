@@ -8,6 +8,7 @@ package com.mycompany.classes;
 /**
  *
  * @author vasqu
+ * @param <T>
  */
 public class Node <T extends Comparable<T>> {
     
