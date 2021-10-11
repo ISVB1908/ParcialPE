@@ -107,15 +107,12 @@ public class Parking {
                 //al supe como llamar la piche clase sin tener uqe hacer maromas con el toString
                 //bueno ya serio vamos a averiguar  la hora
                 Car carrito= (Car) deleteC.getValue();
-                int ae=carrito.getEnterAnio();
-                int moe=carrito.getEnterMonth();
-                int de=carrito.getEnterDay();
-                int he=carrito.getEnterHour();
-                int me=carrito.getEnterMin();
+
                 //int hex=carrito.getExitHour();
                 //int mex=carrito.getExitMin();
-                double facturaImpr=carrito.factura(ae,moe,de,he, me,aex,moex,dex, hex, mex);
-                System.out.println("su factura es de:"+facturaImpr);
+                //
+                //double facturaImpr=carrito.factura(ae,moe,de,he, me,aex,moex,dex, hex, mex);
+                System.out.println("su factura es de:"/*+facturaImpr*/);
                 deleteC.setValue("Empty , Empty , Empty , Empty");
                 location=deleteC;
                 
@@ -143,15 +140,12 @@ public class Parking {
                 //al supe como llamar la piche clase sin tener uqe hacer maromas con el toString
                 //bueno ya serio vamos a averiguar  la hora
                 Car carrito= (Car) deleteC.getValue();
-                int ae=carrito.getEnterAnio();
-                int moe=carrito.getEnterMonth();
-                int de=carrito.getEnterDay();
-                int he=carrito.getEnterHour();
-                int me=carrito.getEnterMin();
+
                 //int hex=carrito.getExitHour();
                 //int mex=carrito.getExitMin();
-                double facturaImpr=carrito.factura(ae,moe,de,he, me,aex,moex,dex, hex, mex);
-                System.out.println("su factura es de:"+facturaImpr);
+                //
+                //double facturaImpr=carrito.factura();
+                System.out.println("su factura es de:"/*+facturaImpr*/);
                 deleteC.setValue("Empty , Empty , Empty , Empty");
                 location=deleteC;
                 

@@ -14,24 +14,13 @@ public class Car implements Comparable<Car> {
     private String brand;
     private String plate;
     private Person owner;
-    private int enterAnio;
-    private int enterMonth;
-    private int enterDay;
-    private int enterHour;
-    private int enterMin;
-    private int exitHour;
-    private int exitMin;
 
     //constructor
-    public Car(String brand, String plate,int enterHour,int enterMin,int enterAnio,int enterMonth,int enterDay, Person owner) {
+    public Car(String brand, String plate,Person owner) {
         this.brand = brand;
         this.plate = plate;
         this.owner = owner;
-        this.enterHour=enterHour;
-        this.enterMin=enterMin;
-        this.enterAnio=enterAnio;
-        this.enterMonth=enterMonth;
-        this.enterDay=enterDay;
+
     }
 
     
@@ -72,38 +61,8 @@ public class Car implements Comparable<Car> {
         
         return plate+","+brand+","+owner.toString();
     }
-
-    public int getEnterMin() {
-        return enterMin;
-    }
-
-    public void setEnterMin(int enterMin) {
-        this.enterMin = enterMin;
-    }
-
-    public int getExitMin() {
-        return exitMin;
-    }
-
-    public void setExitMin(int exitMin) {
-        this.exitMin = exitMin;
-    }
-
-    public int getEnterHour() {
-        return enterHour;
-    }
-
-    public void setEnterHour(int enterHour) {
-        this.enterHour = enterHour;
-    }
-
-    public int getExitHour() {
-        return exitHour;
-    }
-
-    public void setExitHour(int exitHour) {
-        this.exitHour = exitHour;
-    }
+ 
+    //corregir
     public double factura(int enteranio,int entermes,int enterdia,int enterHour,int enterMin,int exitanio,int exitmes,int exitdia, int exitHour,int exitMin){
         int anioPassed=exitanio-enteranio;
         int mesPassed=exitmes-entermes;
@@ -135,30 +94,4 @@ public class Car implements Comparable<Car> {
         return facturaP;
     }
 
-    public int getEnterAnio() {
-        return enterAnio;
-    }
-
-    public void setEnterAnio(int enterAnio) {
-        this.enterAnio = enterAnio;
-    }
-
-    public int getEnterMonth() {
-        return enterMonth;
-    }
-
-    public void setEnterMonth(int enterMonth) {
-        this.enterMonth = enterMonth;
-    }
-
-    public int getEnterDay() {
-        return enterDay;
-    }
-
-    public void setEnterDay(int enterDay) {
-        this.enterDay = enterDay;
-    }
-
- 
-    
 }

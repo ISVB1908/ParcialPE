@@ -37,30 +37,31 @@ public class Main {
             //boolean chekAfiliate=false;
         //}
      //create
+     /*
         Person costumer = new Person(123,true);
-        Car mafe =new Car("1","1",1,0,1,1,1,costumer);
-        Car molano= new Car("2","2",1,0,1,1,1,costumer);
-       Car mario= new Car("3","3",1,0,1,1,1,costumer);
-        Car pau= new Car("4","4",1,0,1,1,1,costumer);
-        Car cata= new Car("5","5",1,0,1,1,1,costumer);
-        Car santiago= new Car("6","6",1,0,1,1,1,costumer);
-        Car jax= new Car("7","7",1,0,1,1,1,costumer);
-        Car ate= new Car("8","8",1,0,1,1,1,costumer);
-        Car teo= new Car("9","9",1,0,1,1,1,costumer);
-        Car juan= new Car("10","10",1,0,1,1,1,costumer);
-        Car xd= new Car("11","11",1,0,1,1,1,costumer);
+        //Car mafe =new Car("1","1",1,0,1,1,1,costumer);
+        //Car molano= new Car("2","2",1,0,1,1,1,costumer);
+        //Car mario= new Car("3","3",1,0,1,1,1,costumer);
+        //Car pau= new Car("4","4",1,0,1,1,1,costumer);
+        //Car cata= new Car("5","5",1,0,1,1,1,costumer);
+        //Car santiago= new Car("6","6",1,0,1,1,1,costumer);
+        //Car jax= new Car("7","7",1,0,1,1,1,costumer);
+        //Car ate= new Car("8","8",1,0,1,1,1,costumer);
+        //Car teo= new Car("9","9",1,0,1,1,1,costumer);
+        //Car juan= new Car("10","10",1,0,1,1,1,costumer);
+        //Car xd= new Car("11","11",1,0,1,1,1,costumer);
         
         //add
-        newParking.addCarro(mafe);
-        newParking.addCarro(molano);
-        newParking.addCarro(mario);
-        newParking.addCarro(pau);
-        newParking.addCarro(cata);
-        newParking.addCarro(santiago);
-        newParking.addCarro(jax);
-        newParking.addCarro(ate);
-        newParking.addCarro(teo);
-        newParking.addCarro(juan);
+        //newParking.addCarro(mafe);
+        //newParking.addCarro(molano);
+        //newParking.addCarro(mario);
+        //newParking.addCarro(pau);
+        //newParking.addCarro(cata);
+        //newParking.addCarro(santiago);
+        //newParking.addCarro(jax);
+        //newParking.addCarro(ate);
+        //newParking.addCarro(teo);
+        //newParking.addCarro(juan);
         
         //newParking.deleteCarroID(123,2,1);
         //newParking.deleteCarroID(123,2,1);
@@ -94,28 +95,8 @@ public class Main {
                     //add
                     String addPlate=JOptionPane.showInputDialog("Digite las placas:");
                     String addBrand=JOptionPane.showInputDialog("Digite las brand:");
-                    int addEnterHour=Integer.parseInt(JOptionPane.showInputDialog("Digite la hora de entrada al parqueadero(0-23):"));
-                    while(addEnterHour>23 || addEnterHour<0){
                     
-                        addEnterHour=Integer.parseInt(JOptionPane.showInputDialog("Digite la hora de entrada al parqueadero(0-23):"));
-                    }
-                    int addEnterMin=Integer.parseInt(JOptionPane.showInputDialog("Digite el minuto de entrada al parqueadero(0-59):"));
-                    while(addEnterMin>59 || addEnterMin<0){
                     
-                        addEnterMin=Integer.parseInt(JOptionPane.showInputDialog("Digite el minuto de entrada al parqueadero(0-59):"));
-                    }
-                    //
-                    int diaEnter=Integer.parseInt(JOptionPane.showInputDialog("Digite el dia de entrada al parqueadero(1-31):"));
-                    while(diaEnter<1 || diaEnter>31){
-                    
-                        diaEnter=Integer.parseInt(JOptionPane.showInputDialog("Digite el dia de entrada al parqueadero(1-31):"));
-                    }
-                    int mesEnter=Integer.parseInt(JOptionPane.showInputDialog("Digite el mes de entrada al parqueadero(1-12):"));
-                    while(mesEnter<1 || mesEnter>12){
-                    
-                        mesEnter=Integer.parseInt(JOptionPane.showInputDialog("Digite el mes de entrada al parqueadero(1-12):"));
-                    }
-                    int anioEnter=Integer.parseInt(JOptionPane.showInputDialog("Digite el anio de entrada al parqueadero:"));
                     //
                     int addId=Integer.parseInt(JOptionPane.showInputDialog("Digite su ID:"));
                     String addAfiliate=JOptionPane.showInputDialog("Si es afiliado escriba si, de lo contrario no(minuscula):");
@@ -140,7 +121,7 @@ public class Main {
                         afi=false;
                     }
                     Person costumerr = new Person(addId,afi);
-                    Car nuevoCarro = new Car(addBrand,addPlate,addEnterHour,addEnterMin,anioEnter,mesEnter,diaEnter,costumerr);
+                    Car nuevoCarro = new Car(addBrand,addPlate,costumerr);
                     newParking.addCarro(nuevoCarro);
                     System.out.println(nuevoCarro.toString());
                     System.out.println(newParking.getParkingList().toString());
@@ -211,6 +192,7 @@ public class Main {
                     //break;
             }
         }while(input!=0);
-        
+        */
     }
+
 }
